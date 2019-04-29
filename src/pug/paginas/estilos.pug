@@ -1,0 +1,13 @@
+extends ../template/modelo
+append config
+  -titulo = "Paltolim | Guia de estilos";
+  - descripcion = "Guia de estilos para el sitio web paltolim";
+
+block header
+ include ../bloques/header
+block main
+ include ../secciones/main-estilos
+block footer
+ include ../bloques/footer
+block script
+  script(src="js/estilos.js")

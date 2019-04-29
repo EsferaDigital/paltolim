@@ -1,0 +1,31 @@
+// Configuración
+
+@import "config/reset.scss";
+@import "config/funciones.scss";
+@import "config/fuentes.scss";
+@import "config/colores.scss";
+@import "config/breakpoints.scss";
+@import "config/var_generales.scss";
+
+// Textos
+
+@import "textos/titulos.scss";
+@import "textos/parrafos.scss";
+
+// Elementos
+
+@import "elements/botones.scss";
+
+// Paginas
+
+// Bloques
+
+@import "bloques/header.scss";
+@import "bloques/main.scss";
+@import "bloques/footer.scss";
+
+// Secciones
+
+@import "secciones/main-inicio.scss";
+@import "secciones/main-tienda.scss";
+@import "secciones/main-estilos.scss";

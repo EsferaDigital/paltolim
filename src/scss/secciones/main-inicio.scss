@@ -1,0 +1,32 @@
+.Productores{
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  @include mq(md){
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 1rem;
+  }
+}
+
+.Productor{
+  border: 2px solid pink;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  &-img{
+    grid-column: 1;
+    grid-row: 1;
+    & img{
+      display: block;
+    }
+  }
+  &-text{
+    border: 2px solid blue;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    color: color(secondary);
+  }
+}
