@@ -1,3 +1,36 @@
+.Banner-inicio{
+  margin-top: -5rem;
+  padding: 15rem 0;
+  background-image: img('banner-inicio.jpg');
+  background-position: center center;
+  position: relative;
+  z-index: capa(capa1);
+  &:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: color(primary);
+    opacity: .7;
+  }
+  & h2{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: calc(50% + 1rem);
+    font-size: 1.3rem;
+    // border: 1px solid red;
+    text-align: center;
+    color: white;
+    z-index: capa(capa2);
+    @include mq(mdl){
+      font-size: 2rem;
+    }
+  }
+}
+
 .Productores{
   border: 2px solid red;
   display: grid;

@@ -1,12 +1,23 @@
 .Header{
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+  // top: 0;
+  // left: 0;
   z-index: capa(capa10);
   width: 100%;
   height: $altura-header;
   line-height: $altura-header;
-  background: $degradado-header;
+  // background: $degradado-header;
+  // border-bottom: 1px solid white;
+  &:before{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 90%;
+    height: 1px;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+  }
   @include mq(mdl){
     padding: 0 10%;
     margin: auto;
@@ -46,9 +57,9 @@
     //   width: 27%;
     //   height: auto;
     // }
-    &:hover{
-      box-shadow: $shadow-flat;
-    }
+    // &:hover{
+    //   box-shadow: $shadow-flat;
+    // }
   }
 }
 
@@ -160,7 +171,7 @@
       font-size: 1.3rem;
     }
     &:hover{
-      font-weight: 800;
+      color: color(secondary);
     }
   }
 }
