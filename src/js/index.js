@@ -1,4 +1,4 @@
-import {toggleNav} from './dev/nav';
+import {toggleNav, headerAnimado} from './dev/nav';
 // import Masonry from './dev/masonry';
 // import SliderFade from '../dev/slider';
 // import TabsNav from '../dev/tabs';
@@ -6,6 +6,7 @@ import {toggleNav} from './dev/nav';
 // import cuentaRegresiva from '../dev/cuenta-regresiva';
 
 toggleNav()
+headerAnimado()
 // Masonry()
 // scrollNav()
 // carruselNormal()

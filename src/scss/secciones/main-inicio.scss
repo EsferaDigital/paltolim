@@ -68,9 +68,10 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
   @include mq(mdl){
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
   }
 }
 

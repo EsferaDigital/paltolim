@@ -1,3 +1,5 @@
+import { TSQualifiedName } from "babel-types";
+
 const toggleNav = () =>{
   const d = document,
   panel = d.querySelector('.Panel'),
@@ -45,5 +47,17 @@ const scrollNav = () =>{
   }
 }
 
+const headerAnimado = () =>{
+  let header = document.getElementById('Header')
+  let pageActual = window.location.pathname
 
-export {toggleNav, scrollNav};
+  if(pageActual == "/tienda.html"){
+    header.classList.add('Header-active')
+  }else if(pageActual == "/estilos.html"){
+    header.classList.add('Header-active')
+  }
+  console.log(pageActual)
+}
+
+
+export {toggleNav, scrollNav, headerAnimado};

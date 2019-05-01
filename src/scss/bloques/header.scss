@@ -6,7 +6,6 @@
   width: 100%;
   height: $altura-header;
   line-height: $altura-header;
-  // background: $degradado-header;
   // border-bottom: 1px solid white;
   &:before{
     content: "";
@@ -32,6 +31,13 @@
     @include mq(lgs){
       display: flex;
     }
+  }
+}
+
+.Header-active{
+  background: $degradado-header;
+  &:before{
+    height: 0;
   }
 }
 
@@ -72,6 +78,9 @@
   color: white;
   text-transform: uppercase;
   letter-spacing: .1rem;
+  @include mq(mdl){
+    left: 10%;
+  }
 }
 .hamburger{
   &:focus{
