@@ -1,0 +1,15 @@
+.Guia-colores{
+  border: 2px solid green;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .5rem;
+  &-item{
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+  }
+}
+
+.Guia-fuentes{
+  border: 2px solid blue;
+}
