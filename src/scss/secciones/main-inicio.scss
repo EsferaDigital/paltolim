@@ -31,35 +31,104 @@
   }
 }
 
+.Box-search{
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  & input{
+    font-family: $fuente-secundaria;
+    border-color: color(secondary);
+    border-radius: 1.5rem 0 0 1.5rem;
+    padding-left: 1.5rem;
+    outline: none;
+    border-right-color: transparent;
+  }
+  & button{
+    display: block;
+    line-height: 3;
+    background-color: color(success);
+    color: color(satin);
+    padding: 0 1.5rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+    border: none;
+    outline: none;
+    transition: background-color .5s ease;
+    &:hover{
+      background-color: darken(color(success),5);
+    }
+    &:active{
+      transform: scale(.95);
+    }
+  }
+}
+
 .Productores{
-  border: 2px solid red;
+  // border: 2px solid red;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
-  @include mq(md){
+  padding-bottom: 1rem;
+  @include mq(mdl){
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 1rem;
   }
 }
 
 .Productor{
-  border: 2px solid pink;
+  // border: 2px solid pink;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   &-img{
     grid-column: 1;
     grid-row: 1;
+    position: relative;
+    &:before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: color(everglade);
+      opacity: .6;
+      position: absolute;
+    }
     & img{
       display: block;
     }
   }
   &-text{
-    border: 2px solid blue;
+    // border: 2px solid blue;
     text-align: center;
     grid-column: 1;
     grid-row: 1;
+    // line-height: 5rem;
     align-self: center;
-    color: color(secondary);
+    color: color(satin);
+    position: relative;
+    z-index: capa(capa1);
+    & h3{
+      margin-bottom: 3rem;
+      letter-spacing: 1px;
+      // font-weight: 600;
+    }
+    & button{
+      // display: block;
+      line-height: 2.6rem;
+      background-color: color(secondary);
+      color: color(satin);
+      padding: 0 1.3rem;
+      border-radius: 1.3rem;
+      letter-spacing: 1px;
+      // text-transform: uppercase;
+      border: 1px solid color(secondary);
+      outline: none;
+      transition: background-color .5s ease, color .5s ease;
+      &:hover{
+        background-color: transparent;
+        color: color(secondary);
+      }
+      &:active{
+        transform: scale(.95);
+      }
+    }
   }
 }

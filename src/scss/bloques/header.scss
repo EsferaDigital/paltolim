@@ -12,11 +12,14 @@
     content: "";
     position: absolute;
     background: white;
-    width: 90%;
-    height: 1px;
-    left: 5%;
-    right: 5%;
+    width: 80%;
+    height: 0;
+    left: 10%;
+    right: 10%;
     bottom: 0;
+    @include mq(mdl){
+      height: 1px;
+    }
   }
   @include mq(mdl){
     padding: 0 10%;

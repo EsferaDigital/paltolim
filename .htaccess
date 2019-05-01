@@ -1,0 +1,8 @@
+# Enviar trafico HTTP a HTTPS
+RewriteEngine On
+RewriteCond %{ENV:HTTPS} !on [NC]
+RewriteCond %{HTTP_HOST} ^paltolim\.cl$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.paltolim\.cl$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ https://paltolim.cl/$1 [R=301,L,NE]
