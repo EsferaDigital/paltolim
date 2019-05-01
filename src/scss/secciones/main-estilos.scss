@@ -1,15 +1,204 @@
-.Guia-colores{
-  border: 2px solid green;
+.Fondo-paltas{
+  background-image: img('wallpaper.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.Estilos{
+  border: 1px solid color(tacha);
+  padding: 1rem;
+  background-color: color(bg);
+  margin: 2rem auto;
+  grid-gap: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  @include mq(mdl){
+    grid-template-columns: 1fr 1fr;
+  }
+  &-item{
+    border: 1px solid color(primary);
+    padding: .5rem;
+    & h2{
+      color: color(tobaco);
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.Guia-colores{
+  // border: 1px solid blue;
+  &-item{
+    width: 80%;
+    // border: 1px solid blue;
+    margin: 1rem 0;
+    & h3{
+      font-family: $fuente-secundaria;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      color: color(primary);
+      padding: .5rem 0 1rem;
+    }
+  }
+}
+
+.Primarios, .Secundarios, .Color-eventos{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: .5rem;
   &-item{
-    width: 5rem;
-    height: 5rem;
-    background-color: red;
+    width: 65px;
+    height: 65px;
+    background-color: color(primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & p{
+      color: white;
+      font-size: .8rem;
+      font-family: $fuente-secundaria;
+      // text-align: center;
+    }
+  }
+  &-item:nth-child(2){
+    background-color: color(secondary);
+  }
+  &-item:nth-child(3){
+    background-color: color(success);
+  }
+  &-item:nth-child(4){
+    background-color: color(tobaco);
+  }
+}
+
+.Secundarios{
+  &-item{
+    background-color: color(everglade2);
+  }
+  &-item:nth-child(2){
+    background-color: color(tacha);
+  }
+  &-item:nth-child(3){
+    background-color: color(amulet);
+  }
+}
+
+.Color-eventos{
+  &-item{
+    background-color: color(persian);
+  }
+  &-item:nth-child(2){
+    background-color: color(granny);
+  }
+  &-item:nth-child(3){
+    background-color: color(shark);
+  }
+  &-item:nth-child(4){
+    background-color: color(satin);
+    border: 1px solid color(shark);
+    & p{
+      color: color(shark);
+    }
+  }
+  &-item:nth-child(5){
+    background-color: color(cta);
+  }
+}
+
+.Guia-iconos{
+  // border: 2px solid blue;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  & i{
+    color: color(secondary);
+    font-size: 3rem;
+    transition: color .5s ease;
+    &:hover{
+      color: color(primary);
+    }
   }
 }
 
 .Guia-fuentes{
-  border: 2px solid blue;
+  & .Fuentes, .Guia-titulos, .Guia-parrafos{
+    margin-top: .5rem;
+    & h3{
+      color: color(primary);
+      font-size: 1.4rem;
+      padding: .5rem 0;
+    }
+    & p{
+      color: color(shark);
+      font-size: 1.2rem;
+      margin: .5rem 0;
+      letter-spacing: 1px;
+    }
+    & p:nth-child(2){
+      font-family: $fuente-secundaria;
+    }
+    & p.Parrafo{
+      font-family: $fuente-secundaria;
+      font-size: 1rem;
+    }
+  }
+}
+
+.Guia-titulos{
+  & p:first-of-type{
+    font-size: 1.7rem;
+  }
+  & p:nth-of-type(2){
+    font-size: 1.5rem;
+  }
+  & p:last-of-type(3){
+    font-size: 1.2rem;
+  }
+}
+
+.Guia-botones{
+  // border: 2px solid blue;
+  padding: .5rem 0;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .5rem;
+  & button{
+    display: inline-block;
+    line-height: 2.6;
+    // background-color: color(success);
+    color: color(satin);
+    padding: 0 1.3rem;
+    border-radius: 1.3rem;
+    border: none;
+    outline: none;
+    transition: background-color .5s ease;
+    &:active{
+      transform: scale(.95);
+    }
+  }
+  & button:first-of-type{
+    background-color: color(primary);
+    &:hover{
+      background-color: darken(color(primary),5);
+    }
+  }
+  & button:nth-of-type(2){
+    background-color: color(success);
+    &:hover{
+      background-color: darken(color(success),5);
+    }
+  }
+  & button:nth-of-type(3){
+    background-color: color(cta);
+    &:hover{
+      background-color: darken(color(cta),5);
+    }
+  }
+  & button:nth-of-type(4){
+    background-color: color(amulet);
+    &:hover{
+      background-color: darken(color(amulet),5);
+    }
+  }
 }
