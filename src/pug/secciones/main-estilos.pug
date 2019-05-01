@@ -70,6 +70,24 @@ main.Main#Main.Fondo-paltas
       .Estilos-item
         h2 Tarjetas
         section.Guia-tarjetas
+          h3.Guia-tarjetas-title Tarjeta Productor
+          .Productor
+            .Productor-img
+              img(src="img/Pcalera.jpg")
+            .Productor-text
+              h3 Productor de Calera
+              button Ver Productos
+          h3.Guia-tarjetas-title Tarjeta Producto
+          .Producto
+            .Producto-img
+              img(src="img/producto1.jpg")
+            .Producto-text
+              p Descripción breve del producto
+              input(type="number" value="1" min="1" max="10" step="1")
+              button Comprar
       .Estilos-item
         h2 Formularios
         section.Guia-formularios
+          .Box-search
+            input(type="search" placeholder="Buscar")
+            button(type="submit") Buscar

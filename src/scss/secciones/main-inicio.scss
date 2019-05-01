@@ -1,6 +1,6 @@
 .Banner-inicio{
   margin-top: -5rem;
-  padding: 15rem 0;
+  padding: 7rem 0;
   background-image: img('banner-inicio.jpg');
   background-position: center center;
   position: relative;
@@ -14,12 +14,13 @@
     background-color: color(primary);
     opacity: .7;
   }
-  & h2{
+  & p{
     position: absolute;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     right: 0;
     left: 0;
-    top: calc(50% + 1rem);
+    top: calc(50% - 1.5rem);
     font-size: 1.3rem;
     // border: 1px solid red;
     text-align: center;
@@ -27,6 +28,25 @@
     z-index: capa(capa2);
     @include mq(mdl){
       font-size: 2rem;
+      width: 57%;
+    }
+    & span{
+      color: color(secondary);
+    }
+  }
+  & p:nth-of-type(2){
+    top: calc(50% + 3rem);
+    font-size: .9rem;
+    font-family: $fuente-secundaria;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    color: color(satin);
+    @include mq(mdl){
+      font-size: 1.2rem;
+      top: calc(50% + 4rem);
     }
   }
 }
@@ -35,7 +55,10 @@
   display: flex;
   // align-items: center;
   justify-content: center;
-  padding: 0 0 2rem;
+  padding-bottom: 1rem;
+  @include mq(mdl){
+    padding-bottom: 2rem;
+  }
   & input{
     font-family: $fuente-secundaria;
     border-color: color(secondary);
@@ -67,11 +90,11 @@
   // border: 2px solid red;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 1rem;
+  // grid-gap: 1rem;
   // padding-bottom: 1rem;
   @include mq(mdl){
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
+    // grid-gap: 2rem;
   }
 }
 
@@ -135,6 +158,9 @@
 }
 
 .Container-inicio{
-  margin: 2rem auto;
+  margin: 1rem auto;
   // border: 2px solid red;
+  @include mq(mdl){
+    margin: 2rem auto;
+  }
 }
