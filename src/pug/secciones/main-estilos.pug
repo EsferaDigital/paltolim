@@ -82,12 +82,39 @@ main.Main#Main.Fondo-paltas
             .Producto-img
               img(src="img/producto1.jpg")
             .Producto-text
-              p Descripción breve del producto
-              input(type="number" value="1" min="1" max="10" step="1")
-              button.btn-comprar Comprar
+              h2.Producto-text-title Titulo del producto
+              .Ranking
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+              .Producto-text-description
+                p Descripción del producto breve. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, voluptate pariatur nesciunt, error consequatur repudiandae eveniet labore harum accusantium perspiciatis illo molestiae minus recusandae vitae deserunt, id et ex maiores.
+              .Producto-text-llevar
+                input(type="number" value="1" min="1" max="10" step="1")
+                button.btn-comprar Comprar
+              .Producto-text-detalles
+                p Debajo de esta tarjeta, ponemos los detalles del producto. Una descripción más larga otras imágenes y/o productos relacionados.
       .Estilos-item
         h2 Formularios
         section.Guia-formularios
           .Box-search
             input(type="search" placeholder="Buscar")
             button(type="submit") Buscar
+          .Box-select
+            input(type="number" value="1" min="1" max="10" step="1")
+          .Box-contacto
+            h3.Guia-tarjetas-title Contacto
+            form(id="Form" name="inicioForm" method="POST" class="Form")
+              .Form-item
+                label(for="nombre") Nombre
+                input(type="text" id="name" name="name" class="Form-input")
+              .Form-item
+                label(for="email") E-mail
+                input(type="email" id="email" name="email" class="Form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
+              .Form-item
+                label(for="message") Mensaje
+                textarea(id="message" name="message" class="Form-input")
+              .Form-item
+                button(type="submit" class="btn-enviar" name="send" value="send") Enviar
