@@ -106,7 +106,7 @@ main.Main#Main.Fondo-paltas
             input(type="number" value="1" min="1" max="10" step="1")
           .Box-contacto
             h3.Guia-tarjetas-title Contacto
-            form(id="Form" name="inicioForm" method="POST" class="Form")
+            form(id="Form" class="Form")
               .Form-item
                 label(for="nombre") Nombre
                 input(type="text" id="name" name="name" class="Form-input")
@@ -117,4 +117,4 @@ main.Main#Main.Fondo-paltas
                 label(for="message") Mensaje
                 textarea(id="message" name="message" class="Form-input")
               .Form-item
-                button(type="submit" class="btn-enviar" name="send" value="send") Enviar
+                button(type="submit" class="btn-enviar") Enviar
